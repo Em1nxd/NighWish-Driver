@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:nightwishdriver/home_screen.dart';
 import 'package:nightwishdriver/routes/route_names.dart';
+import 'package:nightwishdriver/screens/home/second_page.dart';
 import 'package:nightwishdriver/screens/login/auth.dart';
 import 'package:nightwishdriver/screens/login/login.dart';
 import 'package:nightwishdriver/screens/login/personal_data.dart';
 import 'package:nightwishdriver/screens/map/map_page.dart';
 import 'package:nightwishdriver/screens/map/message/message_page.dart';
+import 'package:nightwishdriver/screens/map/show_map.dart';
 import 'package:nightwishdriver/screens/navbar/about.dart';
 import 'package:nightwishdriver/screens/navbar/history.dart';
 import 'package:nightwishdriver/screens/navbar/history_info.dart';
 import 'package:nightwishdriver/screens/navbar/language.dart';
+import 'package:nightwishdriver/screens/product_order/history_product.dart';
 import 'package:nightwishdriver/screens/product_order/product.dart';
+import 'package:nightwishdriver/screens/product_order/second_product.dart';
 import 'package:nightwishdriver/widgets/product_order_widget/order_list_widget.dart';
 
 class AppRoutes {
@@ -38,6 +42,14 @@ class AppRoutes {
         return _route(const MapPage());
       case RouteNames.MESSAGEPAGE:
         return _route(const MessagePage());
+      case RouteNames.SECONDPAGE:
+        return _route(SecondPage());
+      case RouteNames.SECONDORDER:
+        return _route(const SecondProductOrderOne());
+      case RouteNames.HISTORYORDER:
+        return _route(const HistoryOrder());
+      case RouteNames.SHOWMAP:
+        return _route(const ShowMapPage());
     }
   }
 

@@ -5,15 +5,17 @@ import 'package:nightwishdriver/constants/app_colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
-class SecondPrimaryButton extends StatelessWidget {
+class ScndPrimary extends StatelessWidget {
   final String label;
+  final String icon;
 
   final VoidCallback? onPressed;
   // Color color;
   bool isLoading;
   bool isActive;
-  SecondPrimaryButton({
+  ScndPrimary({
     Key? key,
+    required this.icon,
     required this.label,
     required this.onPressed,
     // this.color = AppColors.ORANGE,
@@ -30,7 +32,7 @@ class SecondPrimaryButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(8.r),
         ),
         shadowColor: isActive ? null : Colors.transparent,
-        primary: AppColors.GREEN,
+        primary: AppColors.DARKBLUE,
         fixedSize: Size(343.w, 56.h),
       ),
       child: isLoading
@@ -44,6 +46,14 @@ class SecondPrimaryButton extends StatelessWidget {
                       color: AppColors.WHITE,
                       fontSize: 18.sp,
                       fontWeight: FontWeight.w400),
+                ),
+                SizedBox(width: 11),
+                SvgPicture.asset(
+                  icon,
+                  color: AppColors.WHITE,
+                  fit: BoxFit.none,
+                  width: 24.w,
+                  height: 24.h,
                 ),
               ],
             ),

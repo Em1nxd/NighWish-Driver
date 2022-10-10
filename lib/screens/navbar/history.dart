@@ -91,9 +91,9 @@ class HistoryPage extends StatelessWidget {
                                   'Позвонить',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                      fontSize: 10.sp,
+                                      fontWeight: FontWeight.w500,
                                       color: AppColors.TEXT,
-                                      fontWeight: FontWeight.w500),
+                                      fontSize: 10.sp),
                                 ),
                               ],
                             ),
@@ -108,9 +108,78 @@ class HistoryPage extends StatelessWidget {
                                   'О заказе\n',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                      fontSize: 10.sp,
+                                      fontWeight: FontWeight.w500,
                                       color: AppColors.TEXT,
-                                      fontWeight: FontWeight.w500),
+                                      fontSize: 10.sp),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 12.h),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(20.r),
+                child: ExpansionTile(
+                  backgroundColor: AppColors.WHITE,
+                  title: Text(
+                    'Заказ #1234567890',
+                    style: TextStyle(
+                        color: AppColors.BLACK,
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w600),
+                  ),
+                  subtitle: Text(
+                    'Аккурган улица, 23A  5 ...',
+                    style: TextStyle(
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.w400,
+                        color: AppColors.BLACK),
+                  ),
+                  children: [
+                    Container(
+                      width: 345.w,
+                      height: 120.h,
+                      child: Padding(
+                        padding:
+                            EdgeInsets.only(left: 90.r, right: 90.r, top: 15.r),
+                        child: Row(
+                          children: [
+                            Divider(height: 1.h),
+                            Column(
+                              children: [
+                                const IconWidget(
+                                  icon: AppIcons.PHONE,
+                                ),
+                                SizedBox(height: 10.h),
+                                Text(
+                                  'Позвонить',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: AppColors.TEXT,
+                                      fontSize: 10.sp),
+                                ),
+                              ],
+                            ),
+                            SizedBox(width: 50.w),
+                            Column(
+                              children: [
+                                IconWidget(
+                                  icon: AppIcons.QUESTION,
+                                ),
+                                SizedBox(height: 10.h),
+                                Text(
+                                  'О заказе\n',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w500,
+                                      color: AppColors.TEXT,
+                                      fontSize: 10.sp),
                                 ),
                               ],
                             ),
@@ -160,12 +229,14 @@ class HistoryPage extends StatelessWidget {
                                   'Позвонить',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                      fontSize: 10.sp,
+                                      fontWeight: FontWeight.w500,
                                       color: AppColors.TEXT,
-                                      fontWeight: FontWeight.w500),
+                                      fontSize: 10.sp),
                                 ),
                               ],
                             ),
+                            // This first line we use for our github and gitlab changes
+                            // This second line we use for our backend changes and api deployments
                             SizedBox(width: 50.w),
                             Column(
                               children: [
@@ -177,78 +248,9 @@ class HistoryPage extends StatelessWidget {
                                   'О заказе\n',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                      fontSize: 10.sp,
+                                      fontWeight: FontWeight.w500,
                                       color: AppColors.TEXT,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: 12.h),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(20.r),
-                child: ExpansionTile(
-                  backgroundColor: AppColors.WHITE,
-                  title: Text(
-                    'Заказ #1234567890',
-                    style: TextStyle(
-                        color: AppColors.BLACK,
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  subtitle: Text(
-                    'Аккурган улица, 23A  5 ...',
-                    style: TextStyle(
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w400,
-                        color: AppColors.BLACK),
-                  ),
-                  children: [
-                    Container(
-                      width: 345.w,
-                      height: 120.h,
-                      child: Padding(
-                        padding:
-                            EdgeInsets.only(left: 90.r, right: 90.r, top: 15.r),
-                        child: Row(
-                          children: [
-                            Divider(height: 1.h),
-                            Column(
-                              children: [
-                                IconWidget(
-                                  icon: AppIcons.PHONE,
-                                ),
-                                SizedBox(height: 10.h),
-                                Text(
-                                  'Позвонить',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontSize: 10.sp,
-                                      color: AppColors.TEXT,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                              ],
-                            ),
-                            SizedBox(width: 50.w),
-                            Column(
-                              children: [
-                                IconWidget(
-                                  icon: AppIcons.QUESTION,
-                                ),
-                                SizedBox(height: 10.h),
-                                Text(
-                                  'О заказе\n',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                      fontSize: 10.sp,
-                                      color: AppColors.TEXT,
-                                      fontWeight: FontWeight.w500),
+                                      fontSize: 10.sp),
                                 ),
                               ],
                             ),

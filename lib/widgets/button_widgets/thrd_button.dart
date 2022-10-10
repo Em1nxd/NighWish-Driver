@@ -5,14 +5,14 @@ import 'package:nightwishdriver/constants/app_colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
-class SecondPrimaryButton extends StatelessWidget {
+class ThrdPrimary extends StatelessWidget {
   final String label;
 
   final VoidCallback? onPressed;
   // Color color;
   bool isLoading;
   bool isActive;
-  SecondPrimaryButton({
+  ThrdPrimary({
     Key? key,
     required this.label,
     required this.onPressed,

@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nightwishdriver/constants/app_colors.dart';
@@ -26,11 +27,29 @@ class AppbarWidget extends StatelessWidget with PreferredSizeWidget {
           unselectedLabelColor: AppColors.BLACK,
           controller: controller,
           tabs: [
-            Tab(
-              child: Text('Новые заказы'),
+            Badge(
+              badgeColor: AppColors.GREEN,
+              badgeContent: Text(
+                '4',
+                style: TextStyle(color: AppColors.WHITE),
+              ),
+              animationType: BadgeAnimationType.slide,
+              animationDuration: Duration(milliseconds: 250),
+              child: Tab(
+                child: Text('Новые заказы'),
+              ),
             ),
-            Tab(
-              child: Text('В процессе'),
+            Badge(
+              badgeColor: AppColors.ORANGE,
+              badgeContent: Text(
+                '2',
+                style: TextStyle(color: AppColors.WHITE),
+              ),
+              animationType: BadgeAnimationType.slide,
+              animationDuration: Duration(milliseconds: 250),
+              child: Tab(
+                child: Text('В процессе'),
+              ),
             ),
             Tab(
               child: Text('Завершенный'),

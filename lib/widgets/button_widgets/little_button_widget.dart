@@ -5,14 +5,14 @@ import 'package:nightwishdriver/constants/app_colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
-class SecondPrimaryButton extends StatelessWidget {
+class LittleButton extends StatelessWidget {
   final String label;
 
   final VoidCallback? onPressed;
   // Color color;
   bool isLoading;
   bool isActive;
-  SecondPrimaryButton({
+  LittleButton({
     Key? key,
     required this.label,
     required this.onPressed,
@@ -30,8 +30,8 @@ class SecondPrimaryButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(8.r),
         ),
         shadowColor: isActive ? null : Colors.transparent,
-        primary: AppColors.GREEN,
-        fixedSize: Size(343.w, 56.h),
+        primary: AppColors.PRIMARY,
+        fixedSize: Size(140.w, 36.h),
       ),
       child: isLoading
           ? const Center(child: CupertinoActivityIndicator())
@@ -42,7 +42,7 @@ class SecondPrimaryButton extends StatelessWidget {
                   label,
                   style: TextStyle(
                       color: AppColors.WHITE,
-                      fontSize: 18.sp,
+                      fontSize: 15.sp,
                       fontWeight: FontWeight.w400),
                 ),
               ],

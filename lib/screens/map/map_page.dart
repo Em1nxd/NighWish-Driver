@@ -223,12 +223,14 @@ class _MapPageState extends State<MapPage> {
             SizedBox(
               width: 10.w,
             ),
-            SecondPrimaryButton(
-              label: 'Финиш',
-              icon: AppIcons.FLAG,
-              onPressed: () {
-                AppNavigator.pushNamedAndRemove(RouteNames.HOME);
-              },
+            Expanded(
+              child: SecondPrimaryButton(
+                label: 'Финиш',
+                // icon: AppIcons.FLAG,
+                onPressed: () {
+                  AppNavigator.pushNamedAndRemove(RouteNames.HOME);
+                },
+              ),
             ),
           ],
         ),

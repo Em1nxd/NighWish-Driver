@@ -10,12 +10,20 @@ import 'package:nightwishdriver/constants/app_icons.dart';
 import 'package:nightwishdriver/constants/app_images.dart';
 import 'package:nightwishdriver/routes/app_navigator.dart';
 import 'package:nightwishdriver/routes/route_names.dart';
+import 'package:nightwishdriver/widgets/button_widgets/scnd_primary.dart';
 import 'package:nightwishdriver/widgets/button_widgets/second_primary_button_widget.dart';
 import 'package:nightwishdriver/widgets/button_widgets/third_primary_button.dart';
+import 'package:nightwishdriver/widgets/button_widgets/thrd_button.dart';
 
-class ProductOrderOne extends StatelessWidget {
-  const ProductOrderOne({Key? key}) : super(key: key);
+class SecondProductOrderOne extends StatefulWidget {
+  const SecondProductOrderOne({Key? key}) : super(key: key);
 
+  @override
+  State<SecondProductOrderOne> createState() => _SecondProductOrderOneState();
+}
+
+class _SecondProductOrderOneState extends State<SecondProductOrderOne> {
+  bool _isPickedUp = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,13 +53,6 @@ class ProductOrderOne extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                     fontSize: 15.sp),
               ),
-            ),
-            SizedBox(height: 16.h),
-            Image.asset(
-              AppImages.MAP,
-              width: 343.w,
-              height: 120.h,
-              fit: BoxFit.none,
             ),
             SizedBox(height: 16.h),
             Row(
@@ -315,14 +316,86 @@ class ProductOrderOne extends StatelessWidget {
               ],
             ),
             Spacer(),
-            Expanded(
-              child: SecondPrimaryButton(
-                label: 'Принять',
-                onPressed: () {
-                  AppNavigator.pop();
-                },
-              ),
-            ),
+            _isPickedUp
+                ? ScndPrimary(
+                    label: 'В путь',
+                    icon: AppIcons.FLY,
+                    onPressed: () async {
+                      try {
+                        final coords =
+                            Coords(40.38127194443599, 70.81178068431076);
+                        const title = "";
+                        final availableMaps = await MapLauncher.installedMaps;
+
+                        if (Platform.isIOS) {
+                          final action = CupertinoActionSheet(
+                            actions: [
+                              for (var map in availableMaps)
+                                CupertinoActionSheetAction(
+                                  onPressed: () async {
+                                    AppNavigator.pushNamed(RouteNames.MAPPAGE);
+
+                                    map.showMarker(
+                                      coords: coords,
+                                      title: title,
+                                    );
+                                  },
+                                  child: Text(map.mapName),
+                                ),
+                            ],
+                            cancelButton: CupertinoActionSheetAction(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: const Text("Отменить"),
+                            ),
+                          );
+
+                          showCupertinoModalPopup(
+                              context: context, builder: (context) => action);
+                        } else {
+                          showModalBottomSheet(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return SafeArea(
+                                child: SingleChildScrollView(
+                                  child: Wrap(
+                                    children: <Widget>[
+                                      for (var map in availableMaps)
+                                        ListTile(
+                                          onTap: () {
+                                            AppNavigator.pushNamed(
+                                                RouteNames.MAPPAGE);
+
+                                            map.showMarker(
+                                              coords: coords,
+                                              title: title,
+                                            );
+                                          },
+                                          title: Text(map.mapName),
+                                          leading: SvgPicture.asset(
+                                            map.icon,
+                                            height: 30.0,
+                                            width: 30.0,
+                                          ),
+                                        ),
+                                    ],
+                                  ),
+                                ),
+                              );
+                            },
+                          );
+                        }
+                      } catch (e) {}
+                    },
+                  )
+                : ThrdPrimary(
+                    label: 'Загружен',
+                    onPressed: () {
+                      setState(() {
+                        _isPickedUp = true;
+                      });
+                    }),
             SizedBox(height: 36.h),
           ],
         ),

@@ -9,6 +9,7 @@ class AppImages {
   static const String LOGIN = '$_PATH/login.png';
   static const String FIRST = '$_PATH/first.png';
   static const String MAP = '$_PATH/map.png';
+  static const String MAPONE = '$_PATH/map1.png';
   static const String AAA = '$_PATH/aaa.png';
   static const String THIRD = '$_PATH/third.png';
 }

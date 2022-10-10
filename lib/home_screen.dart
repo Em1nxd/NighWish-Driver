@@ -8,11 +8,10 @@ import 'package:nightwishdriver/constants/app_icons.dart';
 import 'package:nightwishdriver/constants/app_images.dart';
 import 'package:nightwishdriver/routes/route_names.dart';
 import 'package:nightwishdriver/screens/home/first_page.dart';
+import 'package:nightwishdriver/screens/home/second_page.dart';
+import 'package:nightwishdriver/screens/home/third_page.dart';
 import 'package:nightwishdriver/widgets/appbar_widget/appbar_widget.dart';
-import 'package:nightwishdriver/widgets/button_widgets/primary_button_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nightwishdriver/widgets/button_widgets/second_primary_button_widget.dart';
-
 import 'routes/app_navigator.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -33,8 +32,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
       body: TabBarView(
         children: [
           FirstPage(),
-          Container(),
-          Container(),
+          SecondPage(),
+          ThirdPage(),
         ],
         controller: _tabController,
       ),

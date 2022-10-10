@@ -1,20 +1,12 @@
-import 'dart:io';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:map_launcher/map_launcher.dart';
 import 'package:nightwishdriver/constants/app_colors.dart';
 import 'package:nightwishdriver/constants/app_icons.dart';
 import 'package:nightwishdriver/constants/app_images.dart';
-import 'package:nightwishdriver/routes/app_navigator.dart';
-import 'package:nightwishdriver/routes/route_names.dart';
-import 'package:nightwishdriver/widgets/button_widgets/second_primary_button_widget.dart';
-import 'package:nightwishdriver/widgets/button_widgets/third_primary_button.dart';
 
-class ProductOrderOne extends StatelessWidget {
-  const ProductOrderOne({Key? key}) : super(key: key);
+class HistoryOrder extends StatelessWidget {
+  const HistoryOrder({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +15,12 @@ class ProductOrderOne extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.WHITE,
         centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset(AppIcons.PDF),
+          )
+        ],
         elevation: 0,
         title: Text(
           'Rakhmonov Islom',
@@ -77,60 +75,6 @@ class ProductOrderOne extends StatelessWidget {
             Row(
               children: [
                 SvgPicture.asset(
-                  AppIcons.TWO,
-                  width: 20.w,
-                  height: 20.h,
-                ),
-                SizedBox(width: 6.w),
-                Text(
-                  '13:00',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      color: AppColors.BLACK,
-                      fontSize: 14.sp),
-                )
-              ],
-            ),
-            SizedBox(height: 20.h),
-            Row(
-              children: [
-                SvgPicture.asset(
-                  AppIcons.THREE,
-                  width: 20.w,
-                  height: 20.h,
-                ),
-                SizedBox(width: 6.w),
-                Text(
-                  '5,3 км',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      color: AppColors.BLACK,
-                      fontSize: 14.sp),
-                )
-              ],
-            ),
-            SizedBox(height: 20.h),
-            Row(
-              children: [
-                SvgPicture.asset(
-                  AppIcons.FOUR,
-                  width: 20.w,
-                  height: 20.h,
-                ),
-                SizedBox(width: 6.w),
-                Text(
-                  '15 мин',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      color: AppColors.BLACK,
-                      fontSize: 14.sp),
-                )
-              ],
-            ),
-            SizedBox(height: 20.h),
-            Row(
-              children: [
-                SvgPicture.asset(
                   AppIcons.FIVE,
                   width: 20.w,
                   height: 20.h,
@@ -149,18 +93,18 @@ class ProductOrderOne extends StatelessWidget {
             Row(
               children: [
                 SvgPicture.asset(
-                  AppIcons.SIX,
+                  AppIcons.FOUR,
                   width: 20.w,
                   height: 20.h,
                 ),
                 SizedBox(width: 6.w),
                 Text(
-                  'Comment',
+                  '16.06.2006  21:00',
                   style: TextStyle(
                       fontWeight: FontWeight.w400,
                       color: AppColors.BLACK,
                       fontSize: 14.sp),
-                ),
+                )
               ],
             ),
             SizedBox(height: 20.h),
@@ -314,16 +258,6 @@ class ProductOrderOne extends StatelessWidget {
                 ),
               ],
             ),
-            Spacer(),
-            Expanded(
-              child: SecondPrimaryButton(
-                label: 'Принять',
-                onPressed: () {
-                  AppNavigator.pop();
-                },
-              ),
-            ),
-            SizedBox(height: 36.h),
           ],
         ),
       ),

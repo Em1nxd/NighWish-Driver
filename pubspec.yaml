@@ -39,6 +39,10 @@ dependencies:
   pinput: ^2.2.12
   flutter_svg: ^1.1.4
   map_launcher: ^2.2.1+2
+  badges: ^2.0.3
+  firebase_auth: ^3.9.0
+  # cloud_firestore: ^3.4.8
+  firebase_core: ^1.22.0
 
 dev_dependencies:
   flutter_test:

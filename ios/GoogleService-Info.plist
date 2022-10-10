@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>214899068599-vu2a7ksjotbc937rafiamn4sfaqiaalg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.214899068599-vu2a7ksjotbc937rafiamn4sfaqiaalg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBr1u55P0KRxMcep_9cHL4nIvHiY3c768U</string>
+	<key>GCM_SENDER_ID</key>
+	<string>214899068599</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.nightwishdriver</string>
+	<key>PROJECT_ID</key>
+	<string>nightwish-6b72b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>nightwish-6b72b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:214899068599:ios:b511e64dff07aa3e88c732</string>
+</dict>
+</plist>

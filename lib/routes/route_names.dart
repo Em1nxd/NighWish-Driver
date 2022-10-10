@@ -11,4 +11,8 @@ class RouteNames {
   static const String HISTORYINFO = '/historyinfo';
   static const String MAPPAGE = '/mappage';
   static const String MESSAGEPAGE = '/messagepage';
+  static const String SECONDPAGE = '/secondpage';
+  static const String SECONDORDER = '/secondorder';
+  static const String HISTORYORDER = '/historyorder';
+  static const String SHOWMAP = '/showmap';
 }

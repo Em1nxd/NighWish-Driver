@@ -37,4 +37,5 @@ class AppIcons {
   static const String BACK = '$_BASE_PATH/back.svg';
   static const String TOP = '$_BASE_PATH/top.svg';
   static const String ABC = '$_BASE_PATH/abc.svg';
+  static const String PDF = '$_BASE_PATH/pdf.svg';
 }
